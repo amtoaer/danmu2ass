@@ -5,7 +5,4 @@
         "fontsize",
         "prost"
     ],
-    "rust-analyzer.cargo.features": [
-        "rustls"
-    ]
 }

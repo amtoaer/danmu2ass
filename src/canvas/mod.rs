@@ -7,7 +7,7 @@ use anyhow::Result;
 use float_ord::FloatOrd;
 use lane::Lane;
 
-#[derive(Debug, Clone, serde::Deserialize)]
+#[derive(Debug, Clone, serde::Deserialize, serde::Serialize)]
 pub struct Config {
     pub duration: f64,
     pub width: u32,

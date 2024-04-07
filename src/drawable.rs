@@ -1,10 +1,11 @@
 //! 可以绘制的实体
-use super::Danmu;
+
+use crate::Danmu;
 
 /// 弹幕开始绘制的时间就是 danmu 的时间
 pub struct Drawable {
     pub danmu: Danmu,
-    /// 弹幕一共绘制的时间  
+    /// 弹幕一共绘制的时间
     pub duration: f64,
     /// 弹幕的绘制 style
     pub style_name: &'static str,

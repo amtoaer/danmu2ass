@@ -1,6 +1,6 @@
 //! 一个弹幕实例，但是没有位置信息
-use super::CanvasConfig;
-
+use crate::CanvasConfig;
+use anyhow::Result;
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 pub enum DanmuType {
     #[default]
@@ -8,6 +8,18 @@ pub enum DanmuType {
     Top,
     Bottom,
     Reverse,
+}
+
+impl DanmuType {
+    pub fn from_num(num: i32) -> Result<Self> {
+        Ok(match num {
+            1 => DanmuType::Float,
+            4 => DanmuType::Bottom,
+            5 => DanmuType::Top,
+            6 => DanmuType::Reverse,
+            _ => unreachable!(),
+        })
+    }
 }
 
 #[derive(Debug, Clone, PartialEq, Default)]
